@@ -1,0 +1,7 @@
+# IGNORE THY DIRECTORIES #
+.idea
+.vagrant
+
+# IGNORE THY FILES #######
+.DS_Store
+*.iml
