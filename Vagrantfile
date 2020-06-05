@@ -5,7 +5,11 @@ Vagrant.configure("2") do |config|
 
 	config.vm.box = "W3Geek/whiskeybox"
 
+	config.vm.box_version = "0.0.2"
+
 	config.vm.hostname = "whiskeybox"
+
+	config.vm.define "gentlejack"
 
 	config.vm.network "forwarded_port", guest: 80, host: 8080
 

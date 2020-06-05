@@ -106,7 +106,7 @@
 									<br/>
 									Your choice!
 								</h1>
-								<p>Box Version 0.0.1 ❤️</p>
+								<p>Version 0.0.2 - Gentleman Jack 🤵</p>
 							</div>
 						</div>
 					</div>
@@ -165,6 +165,18 @@
 									<tr>
 										<td><strong>PHP</strong></td>
 										<td>7.4.6</td>
+										<td>✅</td>
+									</tr>
+
+									<tr>
+										<td><strong>phpMyAdmin</strong></td>
+										<td>5.0.2</td>
+										<td>✅</td>
+									</tr>
+
+									<tr>
+										<td><strong>Xdebug</strong></td>
+										<td>2.9.5</td>
 										<td>✅</td>
 									</tr>
 
@@ -484,6 +496,19 @@
 									<tr>
 										<th colspan="3">
 											<h3>MySQL 5.7</h3>
+											<p>
+												Don't like managing your MySQL database through a command-line interface?
+												You're in luck! Gentleman Jack is served alongside a database administration
+												tool called phpMyAdmin!
+											</p>
+											<p>
+												You can manage your MySQL database through the comfort of your web browser.
+												Just visit the URL below:
+											</p>
+											<br/>
+											<p>
+												<a href="http://192.168.33.10/phpmyadmin" class="whiskeybox-me">http://192.168.33.10/phpmyadmin</a>
+											</p>
 										</th>
 									</tr>
 									<tr>
@@ -949,7 +974,7 @@
 											<p>This is turned on automatically now. Just visit the URL below:</p>
 											<br/>
 											<p>
-												<a href="http://192.168.33.10:8025">http://192.168.33.10:8025</a>
+												<a href="http://192.168.33.10:8025" class="whiskeybox-me">http://192.168.33.10:8025</a>
 											</p>
 										</th>
 									</tr>
@@ -987,7 +1012,7 @@
 			</div>
 			<div id="footer-bottom">
 				<small>
-					The absolute filepath of this file on whiskeybox is: <strong><?= __FILE__ ?></strong>
+					The absolute filepath of this web page on your whiskeybox is: <strong><?= __FILE__; ?></strong>
 				</small>
 			</div>
 		</footer>
@@ -995,5 +1020,20 @@
 		<!-- Scripts -->
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				if (location.host !== "192.168.33.10") {
+					$("a.whiskeybox-me").each(function() {
+						var anchor = $(this);
+						var anchorUrl = new URL(anchor.attr("href"));
+						anchorUrl.host = location.host;
+
+						var anchorHref = anchorUrl.toString();
+						anchor.attr("href", anchorHref);
+						anchor.text(anchorHref);
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
