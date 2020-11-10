@@ -5,11 +5,16 @@ Vagrant.configure("2") do |config|
 
 	config.vm.box = "W3Geek/whiskeybox"
 
-	config.vm.box_version = "0.0.3"
+	config.vm.box_version = "0.0.4"
 
 	config.vm.hostname = "whiskeybox"
 
 	config.vm.define "gentlejack"
+
+	config.vm.provider "virtualbox" do |vb|
+		vb.customize ["modifyvm", :id, "--memory", 4096]
+		vb.customize ["modifyvm", :id, "--cpus", 4]
+	end
 
 	config.vm.network "forwarded_port", guest: 80, host: 8080
 

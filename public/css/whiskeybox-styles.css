@@ -190,6 +190,13 @@ hr {
 	text-align: center;
 }
 
+iframe {
+	border: none;
+	min-height: 800px;
+	min-width: 100%;
+	width: 100%;
+}
+
 /* @media-queries */
 @media (max-width: 1199px) {
 	main {
