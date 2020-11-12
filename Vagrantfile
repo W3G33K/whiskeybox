@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.box = "W3Geek/whiskeybox"
 
-	config.vm.box_version = "0.0.4"
+	config.vm.box_version = "0.0.5"
 
 	config.vm.hostname = "whiskeybox"
 
