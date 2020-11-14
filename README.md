@@ -3,7 +3,7 @@
 
 Release: Gentleman Jack `gentlejack` 🤵
 
-Version: 0.0.5
+Version: 0.0.6
 
 ### Getting started with whiskeybox on Windows.
 * GIT 2.22.0.windows.1 or higher *(Required)*
