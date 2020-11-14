@@ -106,7 +106,7 @@
 									<br/>
 									Your choice!
 								</h1>
-								<p>Version 0.0.5 - Gentleman Jack 🤵</p>
+								<p>Version 0.0.6 - Gentleman Jack 🤵</p>
 							</div>
 						</div>
 					</div>
@@ -188,7 +188,7 @@
 
 									<tr>
 										<td><strong>NodeJS</strong></td>
-										<td>14.15.0 (via nvm)</td>
+										<td><?= exec('node --version') ?> (via nvm)</td>
 										<td>✅</td>
 									</tr>
 
@@ -848,19 +848,19 @@
 
 									<tr>
 										<td><strong>NodeJS</strong></td>
-										<td>14.15.0</td>
+										<td><?= exec('node --version') ?> (via nvm)</td>
 										<td>✅</td>
 									</tr>
 
 									<tr>
 										<td><strong>nvm</strong></td>
-										<td>Switch Node versions in seconds with Node Version Manager...</td>
+										<td>0.37.0</td>
 										<td>✅</td>
 									</tr>
 
 									<tr>
 										<td><strong>npm</strong></td>
-										<td>6.14.8</td>
+										<td><?= exec('npm --version') ?> (via nvm)</td>
 										<td>✅</td>
 									</tr>
 
