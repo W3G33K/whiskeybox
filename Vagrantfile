@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.box = "W3Geek/whiskeybox"
 
-	config.vm.box_version = "0.0.6"
+	config.vm.box_version = "0.0.7"
 
 	config.vm.hostname = "whiskeybox"
 
@@ -21,9 +21,9 @@ Vagrant.configure("2") do |config|
 
 	config.vm.network "private_network", ip: "192.168.33.10"
 
-	config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
+	config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=777"]
 
 	# Optional NFS. Make sure to remove other synced_folder line too
-	# config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+	# config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=777"] }
 
 end
