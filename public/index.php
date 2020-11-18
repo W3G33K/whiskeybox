@@ -106,7 +106,7 @@
 									<br/>
 									Your choice!
 								</h1>
-								<p>Version 0.0.6 - Gentleman Jack 🤵</p>
+								<p>Version 0.0.7 - Gentleman Jack 🤵</p>
 							</div>
 						</div>
 					</div>
